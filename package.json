@@ -1,0 +1,29 @@
+{
+  "name": "teamhodl",
+  "version": "1.0.0",
+  "description": "Team HODL official website",
+  "main": "server/main.js",
+  "scripts": {
+    "build-css": "stylus source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+    "clean": "rm -rf static/css && mkdir -p static/css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+    "start": "nodemon --watch server -e js,html server/main.js"
+  },
+  "author": "Logan Rado <radologan@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "body-parser": "^1.15.2",
+    "connect-multiparty": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "email-validator": "^1.0.3",
+    "express": "^4.14.0",
+    "multer": "^1.1.0",
+    "multipart": "^0.1.5",
+    "nodemon": "^1.9.2",
+    "restler": "^3.4.0",
+    "serve-favicon": "^2.3.0"
+  }
+}
