@@ -50,6 +50,6 @@ app.use( (err, req, res, next) => {
     res.status(err.status || 500).send(err.message || 'Internal server error.');
 });
 
-// app.listen(process.env.PORT || 3000, function () {
-//   console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
-// })
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
+})
